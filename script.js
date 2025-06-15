@@ -25,3 +25,40 @@ const flashcards = [
       "Os tipos primitivos em JavaScript são: String, Number, Boolean, Null, Undefined, BigInt e Symbol. Eles representam valores imutáveis e não são objetos.",
   },
 ];
+
+const questionCard = document.querySelector(".question-card");
+const nextBtn = document.querySelector(".next-btn");
+const actualQuestion = document.querySelector(".actual");
+const totalQuestion = document.querySelector(".total");
+
+let currentIndex = 0;
+let showingAnswer = false;
+
+totalQuestion.textContent = flashcards.length;
+
+function renderCard() {
+  const currentItem = flashcards[currentIndex];
+  questionCard.textContent = showingAnswer
+    ? currentItem.answer
+    : currentItem.question;
+  actualQuestion.textContent = currentIndex + 1;
+}
+
+questionCard.addEventListener("click", () => {
+  showingAnswer = !showingAnswer;
+  questionCard.classList.toggle("show-answer");
+  renderCard();
+});
+
+nextBtn.addEventListener("click", () => {
+  if (currentIndex < flashcards.length - 1) {
+    currentIndex++;
+    showingAnswer = false;
+  } else {
+    nextBtn.disabled = true;
+  }
+
+  renderCard();
+});
+
+renderCard();

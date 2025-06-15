@@ -28,6 +28,7 @@ const flashcards = [
 
 const questionCard = document.querySelector(".question-card");
 const nextBtn = document.querySelector(".next-btn");
+const resetBtn = document.querySelector(".reset-btn");
 const actualQuestion = document.querySelector(".actual");
 const totalQuestion = document.querySelector(".total");
 
@@ -57,8 +58,18 @@ nextBtn.addEventListener("click", () => {
     questionCard.classList.remove("show-answer");
   } else {
     nextBtn.classList.add("disabled");
+    resetBtn.classList.remove("none");
   }
 
+  renderCard();
+});
+
+resetBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex + 1) % flashcards.length;
+  showingAnswer = false;
+  questionCard.classList.remove("show-answer");
+  nextBtn.classList.remove("disabled");
+  resetBtn.classList.add("none");
   renderCard();
 });
 

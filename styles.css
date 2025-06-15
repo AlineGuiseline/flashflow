@@ -1,0 +1,104 @@
+:root {
+  --purple-050: #F8F7FF;
+  --purple-100: #E7DDFF;
+  --purple-200: #8B5CF6;
+  --purple-300: #6A3FCB;
+
+  --white: #FFFFFF;
+  --gray-100: #E2E2E2;
+  --gray-200: #3F4658;
+  --gray-300: #1E1E1E;
+
+  --font-primary: "Sora", sans-serif;
+  --font-secondary: "Inter", sans-serif;
+
+  --text-xl: 2rem;
+  --text-lg: 1.5rem;
+  --text-md: 1rem;
+  --text-sm: 14px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--purple-050);
+  font-family: var(--font-secondary);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 2.5rem;
+}
+
+h1 {
+  font-family: var(--font-primary);
+  color: var(--purple-200);
+  font-size: var(--text-xl);
+}
+
+h3 {
+  font-size: var(--text-md);
+  font-weight: normal;
+  color: var(--gray-200)
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.question-card {
+  background-color: var(--white);
+  border-radius: 1rem;
+  width: 17rem;
+  height: 15rem;
+  padding: 1.5rem;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: var(--text-lg);
+  color: var(--gray-300);
+}
+
+.show-answer {
+  background-color: var(--purple-100);
+  font-size: var(--text-md);
+}
+
+.instruction {
+  font-size: var(--text-sm);
+  color: var(--gray-200);
+  font-weight: 500;
+}
+
+.next-btn {
+  background-color: var(--purple-300);
+  width: 7.75rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: .5rem;
+  cursor: pointer;
+
+  color: var(--white);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.next-btn.disabled {
+  background-color: var(--purple-100);
+  cursor: not-allowed;
+}

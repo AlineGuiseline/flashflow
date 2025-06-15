@@ -54,8 +54,9 @@ nextBtn.addEventListener("click", () => {
   if (currentIndex < flashcards.length - 1) {
     currentIndex++;
     showingAnswer = false;
+    questionCard.classList.remove("show-answer");
   } else {
-    nextBtn.disabled = true;
+    nextBtn.classList.add("disabled");
   }
 
   renderCard();

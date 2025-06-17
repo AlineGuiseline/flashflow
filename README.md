@@ -1,5 +1,5 @@
 ## 📚 Projeto Flashcards
-Este projeto é um site de flashcards interativos desenvolvido como parte de um desafio da pós-graduação. O objetivo é criar uma página para estudo que exiba perguntas e respostas de forma prática e eficiente, reforçando a memorização ativa de conteúdos.
+Este projeto é um site de flashcards interativos desenvolvido como parte de um desafio da pós-graduação **Dev Start** da **Rocketseat**. O objetivo é criar uma página para estudo que exiba perguntas e respostas de forma prática e eficiente, reforçando a memorização ativa de conteúdos.
 
 ### 🎯 Objetivo
 Desenvolver um site desktop que apresente flashcards com perguntas e respostas. O usuário pode clicar em cada card para visualizar a resposta e navegar entre os cards de forma sequencial.
